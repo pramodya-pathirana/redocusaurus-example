@@ -1,3 +1,5 @@
+This site showcases how you can create API documentation with [Redocusaurus](https://github.com/rohit-gohri/redocusaurus) (Redocly for Docusaurus v2). It uses the Swagger Petstore API definition available at https://petstore.swagger.io/. 
+
 # Website
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
