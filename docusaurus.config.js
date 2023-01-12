@@ -23,20 +23,28 @@ const config = {
     [
       'classic',
       ({
-        docs: {
-          routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
-          showLastUpdateTime: true,
-          showLastUpdateAuthor: true,
-        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
-  ],
-  plugins: [
-
+    [
+      'redocusaurus',
+      {
+        // Plugin Options for loading OpenAPI files
+        specs: [
+          {
+            spec: 'pet-store.json',
+            route: '/',
+          },
+        ],
+        // Theme Options for modifying how redoc renders them
+        theme: {
+          // Change with your site colors
+          primaryColor: '#FEC925',
+        },
+      },
+    ],
   ], 
   stylesheets: [
     "https://fonts.googleapis.com/icon?family=Material+Icons",
@@ -46,9 +54,6 @@ const config = {
     ({
       navbar: {
         title: 'API docs with Redocly',
-        items: [
-          // { to: '/', label: 'Platform', position: 'left', },
-        ],
       },
       prism: {
         theme: lightCodeTheme,

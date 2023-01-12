@@ -1,7 +1,7 @@
-module.exports = {
-  mySidebar: [
-    'index'
-  ],
-};
+// module.exports = {
+//   mySidebar: [
+//     'index'
+//   ],
+// };
 
 
